@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Ayam</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h2>Toko Ayam</h2>
+
+    <!-- Form Tambah Barang -->
+    <div class="form-container">
+        <input type="text" id="eventName" placeholder="Nama Barang">
+        <input type="number" id="eventPrice" placeholder="Harga">
+        <input type="file" id="eventImage">
+        <button onclick="addEvent()">Tambah Barang</button>
+    </div>
+
+    <!-- Daftar Barang -->
+    <h3>Daftar Barang</h3>
+    <div id="eventContainer"></div>
+
+    <!-- Keranjang Belanja -->
+    <h3>Keranjang</h3>
+    <div id="cartContainer"></div>
+
+    <!-- Tombol Checkout -->
+    <button id="checkoutButton" onclick="checkout()" disabled>Beli</button>
+</body>
+</html>
